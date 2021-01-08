@@ -14,6 +14,11 @@ provider:
   stage: ${opt:stage, 'dev'}
   region: ${opt:region, 'us-east-1'}
 
+  //ADDED TRACING
+  tracing:
+    lambda: true
+    apiGateway: true 
+
   environment:
     PROJECT_NAME: project4-serverless
     TODOS_TABLE: project4-lehbab-serverless-app-todo-${self:provider.stage}
